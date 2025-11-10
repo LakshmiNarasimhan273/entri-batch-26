@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Event Registration Form with Validation">
+    <title>Event Registration Form</title>
+</head>
+<body>
+    <header>
+        <h1>Event Registration</h1>
+    </header>
+
+    <main>
+        <form action="success.html">
+
+            <div>
+                <label for="">Username</label>
+                <input type="text" required>
+            </div>
+
+            <div>
+                <label for="">Email</label>
+                <input type="email" required>
+            </div>
+
+            <div>
+                <label for="">Mobile Number</label>
+                <input type="tel" pattern="[0-9]{10}" required>
+            </div>
+
+            <div>
+                <label for="">Age</label>
+                <input type="number" min="18" max="100" required>
+            </div>
+
+            <div>
+                <label for="">Date of Birth</label>
+                <input type="date" required>
+            </div>
+
+            <div>
+                <label for="">Gender</label>
+                <select required>
+                    <option value="">Select your gender</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Others</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Password</label>
+                <input type="password" required>
+            </div>
+
+            <div>
+                <label for="">Bio</label>
+                <textarea rows="4" required></textarea>
+            </div>
+
+            <div>
+                <label for="">
+                    <input type="checkbox" required> Terms & Conditions
+                </label>
+            </div>
+
+            <button>Register now</button>
+
+        </form>
+    </main>
+</body>
+</html>
