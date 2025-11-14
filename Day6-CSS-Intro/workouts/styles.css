@@ -1,0 +1,15 @@
+/* id selector - # */
+#main-title{
+    color: yellow;
+}
+
+/* class selector - . */
+.container{
+    color: red;
+}
+
+/* nested selector */
+.container img{
+    width: 20%;
+    height: 20%;
+}
