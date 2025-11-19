@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar-links li a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+}

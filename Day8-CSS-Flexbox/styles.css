@@ -1,0 +1,15 @@
+ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    justify-content: center;
+    padding: 85px;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
