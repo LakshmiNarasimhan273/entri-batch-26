@@ -1,0 +1,25 @@
+/* Mobile design */
+body{
+    text-align: center;
+    background-color: #001f4d;
+    color: white;
+}
+
+/* Table screen design */
+@media(min-width: 600px){
+    body{
+        text-align: left;
+        background-color: #b2f7b5;
+        color: black;
+    }
+
+}
+
+/* Laptop and desktop design */
+@media(min-width: 1024px){
+    body{
+        text-align: right;
+        background-color: red;
+        color: white;
+    }
+}
