@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Card with Modal">
+    <title>Card & Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .product-img{
+            max-height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h4 class="navbar-brand">Shopyfy.</h4>
+
+        <button class="navbar-toggler" 
+        data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="" class="nav-link">My Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Card div Starts here... -->
+    <div class="container mt-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://i.pinimg.com/736x/7b/e7/09/7be70919944e835b1a920fa990d2f3a3.jpg" class="product-img"  alt="">
+
+            <div class="card-body">
+                <h5 class="card-title">Men's Professional Watch</h5>
+                <p class="card-text text-primary fw-bold">$456.32</p>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ipsa enim eos laboriosam laborum placeat praesentium quas cupiditate optio! Aperiam, sapiente animi accusantium id quaerat reprehenderit recusandae similique temporibus debitis.</p>
+                <button data-bs-toggle="modal" data-bs-target="#infoModal" class="btn btn-warning">More Info</button>
+            </div>
+        </div>
+    </div>
+    <!-- Card div ends... -->
+
+    <!-- Modal div starts here... -->
+     <!-- parent div -> modal class -->
+    <div class="modal fade" id="infoModal">
+        <!-- div for modal-dialog -->
+         <div class="modal-dialog">
+            <!-- div for modal contents -->
+             <div class="modal-content">
+
+                <!-- header -->
+                 <div class="modal-header">
+                    <h5>Product Info</h5>
+                    <button type="button" data-bs-dismiss="modal" class="btn-close"></button>
+                 </div>
+
+                 <!-- body -->
+                  <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sed quia facere at dicta sapiente, qui fuga aperiam maxime quae nostrum? Ipsa, nobis repudiandae fugiat facere laudantium iure corrupti. Iste.</p>
+                  </div>
+
+                  <!-- footer -->
+                   <div class="modal-footer">
+                    Only 5 items left
+                   </div>
+
+             </div>
+         </div>
+    </div>
+    <!-- Modal div ends... -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
