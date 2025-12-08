@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="adventure park registration form">
+    <title>Adventure Park - Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark foxed-top">
+        <div class="container">
+            <a href="" class="navbar-brand">Adventure Park</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div style="height: 56px;"></div>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Register for your Adventure</h2>
+        <p class="text-center mb-5">Fill out the form below to book your spot</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <form action="success.html" class="border p-4 rounded shadow-sm">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="">Full Name</label>
+                            <input class="form-control" type="text" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="">Email</label>
+                            <input class="form-control" type="email" required>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="">Contact Number</label>
+                            <input class="form-control" type="tel" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="">Number of persons</label>
+                            <input type="number" class="form-control" name="" id="" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="">Select your Activity</label>
+                        <select class="form-select" name="" id="" required>
+                            <option selected disabled value="">Choose your activity</option>
+                            <option value="">Giant Water Slides</option>
+                            <option value="">Massive Wave Pool</option>
+                            <option value="">Adrenaline Rollercoaster</option>
+                            <option value="">Go-Kart Racing</option>
+                            <option value="">Giant Ferris Wheel</option>
+                            <option value="">Bumper Cars Arena</option>
+                        </select>
+
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-warning btn-lg fw-bold">Book Activity</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
