@@ -1,0 +1,20 @@
+/* Mobile design */
+body{
+    background-color: black;
+    color: white;
+}
+
+/* Tablet design */
+@media(min-width: 768px){
+    body{
+        background-color: teal;
+        color: white;
+    }
+}
+
+@media(min-width: 1024px){
+    body{
+        background-color: blue;
+        color: yellow;
+    }
+}
