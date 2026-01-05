@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f6f8;
+}
+
+form{
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: grid;
+    gap: 12px;
+    border-radius: 5px;
+}
+
+p{
+    color: red;
+}
+
+h2{
+    text-align: center;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #1e40af;
+}
