@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dialogflow Chatbot Demo</title>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Our Website</h1>
+    <p>Chat with our virtual assistant below</p>
+  </header>
+
+  <section class="content">
+    <h2>About Us</h2>
+    <p>
+      This is a simple webpage integrated with Dialogflow chatbot.
+    </p>
+  </section>
+
+  <!-- Dialogflow Messenger -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Booking_Bot"
+  agent-id="b5f15f85-52d3-467d-88f1-efe2c82ab9ae"
+  language-code="en"
+></df-messenger>
+
+</body>
+</html>
