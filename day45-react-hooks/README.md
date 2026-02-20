@@ -1,16 +1,212 @@
-# React + Vite
+# React Hooks – useState & useEffect – Student Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# What are React Hooks?
 
-Currently, two official plugins are available:
+Hooks are special functions in React that allow functional components to use state and lifecycle features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hooks were introduced to avoid using class components.
 
-## React Compiler
+Two most important hooks:
+- useState → Manage state
+- useEffect → Handle side effects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# useState Hook
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What is useState?
+
+useState is used to store and manage data inside a component.
+
+When the state changes, React re-renders the component.
+
+---
+
+## Syntax
+
+```jsx
+const [state, setState] = useState(initialValue);
+```
+
+- state → current value
+- setState → function to update value
+- initialValue → starting value
+
+---
+
+## Counter Example
+
+```jsx
+import { useState } from "react";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+
+      <button onClick={() => setCount(count - 1)}>
+        Decrement
+      </button>
+
+      <button onClick={() => setCount(0)}>
+        Reset
+      </button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+## Important Points About useState
+
+- State updates cause re-render.
+- Do not modify state directly.
+- Always use the setter function.
+- Multiple states can be used in one component.
+
+Example:
+
+```jsx
+const [name, setName] = useState("");
+const [age, setAge] = useState(0);
+```
+
+---
+
+# useEffect Hook
+
+## What is useEffect?
+
+useEffect is used to handle side effects in React.
+
+Side effects include:
+- API calls
+- Timers
+- DOM updates
+- Event listeners
+
+---
+
+## Basic Syntax
+
+```jsx
+useEffect(() => {
+  // side effect code here
+}, [dependency]);
+```
+
+- Runs after component renders.
+- Dependency array controls when it runs.
+
+---
+
+## Types of useEffect Usage
+
+1. Run only once (on mount)
+
+```jsx
+useEffect(() => {
+  console.log("Component Mounted");
+}, []);
+```
+
+2. Run when dependency changes
+
+```jsx
+useEffect(() => {
+  console.log("Count changed");
+}, [count]);
+```
+
+3. Run on every render
+
+```jsx
+useEffect(() => {
+  console.log("Rendered");
+});
+```
+
+---
+
+# API Example using useEffect
+
+```jsx
+import { useState, useEffect } from "react";
+
+function App() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) => setUsers(data));
+  }, []);
+
+  return (
+    <div>
+      <h1>User List</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+# Real-Time Understanding
+
+useState → Store data (counter, form input, toggle)  
+useEffect → Fetch data, run logic after render  
+
+Example:
+- Button click → useState updates count
+- Component loads → useEffect fetches API
+
+---
+
+# Key Differences
+
+useState:
+- Stores data
+- Triggers re-render
+
+useEffect:
+- Handles side effects
+- Runs after render
+- Controlled using dependency array
+
+---
+
+# Important Rules
+
+- Hooks must be used inside functional components.
+- Hooks cannot be used inside loops or conditions.
+- Always import hooks from React.
+
+```jsx
+import { useState, useEffect } from "react";
+```
+
+---
+
+# End Notes
+
+useState manages data.  
+useEffect manages side effects.  
+
+Both are fundamental hooks in modern React development.
