@@ -1,4 +1,5 @@
 import React from 'react'
+import "./home.css";
 
 function Home(props) {
     return (
@@ -11,7 +12,7 @@ function Home(props) {
                     </div>
                 ) : (
                     <div>
-                        <h4>Please Login and access your info</h4>
+                        <h4 className='error'>Please Login and access your info</h4>
                     </div>
                 )
             }

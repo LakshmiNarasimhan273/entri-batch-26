@@ -1,16 +1,182 @@
-# React + Vite
+# React Props & Conditional Rendering – Student Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Props
 
-Currently, two official plugins are available:
+## What are Props?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Props (short for Properties) are used to pass data from one component to another.
 
-## React Compiler
+In simple terms:
+Props allow a parent component to send data to a child component.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Why Props Are Important?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Make components reusable
+- Allow dynamic data
+- Enable parent-to-child communication
+- Improve component flexibility
+
+---
+
+## Example of Props
+
+### Step 1: Create Child Component
+
+User.jsx
+
+```jsx
+const User = (props) => {
+  return <h2>Welcome, {props.name}</h2>;
+};
+
+export default User;
+```
+
+---
+
+### Step 2: Pass Props from Parent
+
+App.jsx
+
+```jsx
+import User from "./User";
+
+function App() {
+  return (
+    <div>
+      <User name="Narasimhan" />
+      <User name="React Learner" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+Output:
+Welcome, Narasimhan  
+Welcome, React Learner
+
+---
+
+## Destructuring Props (Recommended Method)
+
+Instead of writing props.name, we can destructure:
+
+```jsx
+const User = ({ name }) => {
+  return <h2>Welcome, {name}</h2>;
+};
+```
+
+---
+
+## Important Points About Props
+
+- Props are read-only (cannot be modified inside child component)
+- Props help make reusable components
+- Data flows from parent → child
+- You can pass strings, numbers, arrays, objects, and functions
+
+---
+
+# Conditional Rendering
+
+## What is Conditional Rendering?
+
+Conditional rendering means showing or hiding UI elements based on a condition.
+
+In simple terms:
+Render different content based on state or logic.
+
+---
+
+## Why Use Conditional Rendering?
+
+- Show login/logout button
+- Show loading spinner
+- Display success/error messages
+- Hide or show components dynamically
+
+---
+
+## Method 1: Using if Statement
+
+```jsx
+function App() {
+  const isLoggedIn = true;
+
+  if (isLoggedIn) {
+    return <h1>Welcome Back!</h1>;
+  } else {
+    return <h1>Please Login</h1>;
+  }
+}
+```
+
+---
+
+## Method 2: Using Ternary Operator (Most Common)
+
+```jsx
+function App() {
+  const isLoggedIn = false;
+
+  return (
+    <div>
+      {isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Login</h1>}
+    </div>
+  );
+}
+```
+
+---
+
+## Method 3: Using Logical AND (&&)
+
+Used when showing something only if condition is true.
+
+```jsx
+function App() {
+  const isAdmin = true;
+
+  return (
+    <div>
+      {isAdmin && <h2>Admin Panel Access</h2>}
+    </div>
+  );
+}
+```
+
+---
+
+# Real-Time Example
+
+Login System Example:
+
+- If user is logged in → Show Dashboard
+- If not logged in → Show Login Page
+- If loading → Show Loading Spinner
+
+This is achieved using conditional rendering.
+
+---
+
+# Key Points to Remember
+
+- Props are used to pass data between components.
+- Props are read-only.
+- Conditional rendering controls what appears on the screen.
+- Ternary operator is commonly used in React.
+- Logical AND (&&) is used for simple true conditions.
+
+---
+
+# End Notes
+
+Props make components dynamic.  
+Conditional rendering makes UI interactive.  
+
+Both are fundamental concepts in React development.
