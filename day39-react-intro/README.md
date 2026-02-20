@@ -1,16 +1,140 @@
-# React + Vite
+# React Introduction – Student Notes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is React?
 
-Currently, two official plugins are available:
+React is a JavaScript library used to build user interfaces (UI), especially for single-page applications (SPA).  
+It helps developers create reusable components and build fast, interactive web applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React was developed by Facebook and is widely used in modern frontend development.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Why Use React?
 
-## Expanding the ESLint configuration
+- Component-based architecture
+- Reusable UI components
+- Fast rendering using Virtual DOM
+- Strong community support
+- Easy integration with APIs
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# Creating a React Project Using Vite
+
+Vite is a modern and fast build tool for frontend development.  
+It creates React projects quickly and provides faster development server startup.
+
+---
+
+## Step 1: Install Node.js
+
+Make sure Node.js is installed on your system.
+
+Check version:
+```bash
+node -v
+```
+
+If not installed, download from:
+https://nodejs.org
+
+---
+
+## Step 2: Create React Project Using Vite
+
+Run the following command in terminal:
+
+```bash
+npm create vite@latest
+```
+
+It will ask:
+- Project name → (example: my-react-app)
+- Select framework → React
+- Select variant → JavaScript
+
+---
+
+## Step 3: Move into Project Folder
+
+```bash
+cd my-react-app
+```
+
+---
+
+## Step 4: Install Dependencies
+
+```bash
+npm install
+```
+
+This installs all required packages.
+
+---
+
+## Step 5: Start the React Development Server
+
+```bash
+npm run dev
+```
+
+After running this command, Vite will provide a local URL like:
+
+```
+http://localhost:5173/
+```
+
+Open it in your browser to see your React app running.
+
+---
+
+# Project Structure (Basic Understanding)
+
+- index.html → Main HTML file
+- src/main.jsx → Entry point of React app
+- src/App.jsx → Main component
+- package.json → Project dependencies and scripts
+- node_modules → Installed packages
+
+---
+
+# Basic React App Flow
+
+1. main.jsx renders App component
+2. App.jsx contains UI logic
+3. Changes auto-refresh in browser (Hot Reload)
+
+---
+
+# Important Commands Summary
+
+Create Project:
+```bash
+npm create vite@latest
+```
+
+Install Packages:
+```bash
+npm install
+```
+
+Start Project:
+```bash
+npm run dev
+```
+
+---
+
+# Key Points to Remember
+
+- React is a library for building UI.
+- Vite is used to quickly create and run React projects.
+- Always run `npm install` before starting the project.
+- Use `npm run dev` to start the development server.
+
+---
+
+# End Notes
+
+This is the standard method used in modern React development to create and start projects using Vite.
