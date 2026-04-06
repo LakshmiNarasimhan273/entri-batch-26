@@ -1,0 +1,17 @@
+{
+  "products": [
+    {
+      "title": "Sample Product",
+      "price": 102,
+      "inStock": true,
+      "id": "1"
+    },
+    {
+      "title": "Test",
+      "price": 34,
+      "inStock": true,
+      "id": "s9WBWe7iTeg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
