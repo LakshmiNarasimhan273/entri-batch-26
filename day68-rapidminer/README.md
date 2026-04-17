@@ -15,6 +15,8 @@ Input Data → Model Learning → Prediction Output
 ---
 
 ## 📂 Dataset
+[Download Dataset](./data/products.csv) 
+# Use this above datasets for practice
 
 We use a CSV file with the following columns:
 
