@@ -1,23 +1,24 @@
 const userModel = require("../model/user.model");
 
 // 1 POST API
-const createUser = async (req, res) => {
-    const { username, email, password } = req.body;
-    try {
-        if (!username || !email || !password) {
-            // 400 - Bad Request
-            return res.status(400).json({ message: "All the fields are required" });
-        }   
-        const user = await userModel.create({ username, email, password });
-        // 201 - Created
-        return res.status(201).json(user);
-    } catch (err) {
-        // 500 - Internal Server Error
-        return res.status(500).json({ message: "Internal Server Error" });
-    }
-}
+// const createUser = async (req, res) => {
+//     const { username, email, password } = req.body;
+//     try {
+//         if (!username || !email || !password) {
+//             // 400 - Bad Request
+//             return res.status(400).json({ message: "All the fields are required" });
+//         }   
+//         const user = await userModel.create({ username, email, password });
+//         // 201 - Created
+//         return res.status(201).json(user);
+//     } catch (err) {
+//         // 500 - Internal Server Error
+//         return res.status(500).json({ message: "Internal Server Error" });
+//     }
+// }
 
 // 2 GET ALL
+
 const getallUsers = async (req, res) => {
     try {
         const users = await userModel.find().select("-password");
@@ -73,4 +74,4 @@ const deleteUser = async (req, res) => {
     }
 }
 
-module.exports = { createUser, getallUsers, getuserbyId, updateUser, deleteUser };
+module.exports = { getallUsers, getuserbyId, updateUser, deleteUser };
