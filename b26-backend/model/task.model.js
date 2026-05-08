@@ -14,7 +14,7 @@ const taskSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    userId: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "users"
