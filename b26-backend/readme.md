@@ -1,5 +1,5 @@
 # env variables
 
 - port = 8081
-- dburl
-- jwt_secret
+- dburl = localhost db url
+- jwt_secret = entri-batch-26
